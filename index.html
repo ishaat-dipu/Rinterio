@@ -17,9 +17,23 @@
         font-family: "Manrope", sans-serif;
     }
 </style>
+<!--Color Config Files-->
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          clifford: '#da373d',
+          'button-primary' : '#ABEF5F',
+
+        }
+      }
+    }
+  }
+</script>
 </head>
 <body class="font-manrope">
-    <header>
+    <header class="w-full"> <!-- Changed this line -->
       <!-- Navbar -->
       <nav class="bg-white shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,12 +41,11 @@
             <!-- Logo and brand name -->
             <div class="flex items-center">
               <div class="flex-shrink-0 flex items-center">
-                <div class="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center mr-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
+                <div class="ml-2 inline-flex items-center justify-center w-6 h-6 bg-button-primary text-white rounded-full">
+                  <span class="text-xs text-black">↗</span> 
+                  <span>  </span>
                 </div>
-                <span class="font-bold text-xl">Rinterio</span>
+                <span class="ml-2 font-bold text-xl text-black">Rinterio</span> <!-- Added ml-2 to create the gap -->
               </div>
             </div>
             
@@ -57,11 +70,11 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </button>
-              <a href="#" class="ml-4 px-4 py-2 bg-green-400 text-white rounded-full font-medium hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+              <a href="#" class="ml-4 px-3 py-2 bg-button-primary text-black rounded-full font-medium  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 ">
                 Book Consult
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block ml-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
+                <span class="ml-2 inline-flex items-center justify-center w-6 h-6 bg-black text-white rounded-full">
+                  <span class="text-xs">↗</span>
+                </span>
               </a>
               
               <!-- Mobile menu button -->
@@ -75,58 +88,9 @@
         </div>
       </nav>
   
-  
     </header>
     <body>
-      <!-- Our Latest Portfolio -->
-      <div class="container mx-auto px-4 py-8">
-        <h2 class="text-center text-3xl font-bold mb-4">Our Latest Portfolio</h2>
-        <p class="text-center mb-8">
-          The barn house captivates with its blend of rustic charm and modern sophistication,
-          featuring weathered wood, sleek metal accents.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- First Row -->
-          <div class="md:col-span-2 lg:col-span-1 flex flex-col items-center">
-            <img src="./images/img1.png" alt="Commercial Project 1" class="w-full h-auto">
-            <h3 class="text-xl font-semibold mt-4">Commercial</h3>
-            <p class="text-gray-600">
-              The barn house captivates with its blend of rustic charm and modern.
-            </p>
-            <a href="#" class="text-green-500 mt-2">View Details</a>
-          </div>
-      
-          <!-- Second Row -->
-          <div class="md:col-span-1 lg:col-span-2 flex flex-col items-center">
-            <img src="./images/img2.png" alt="Commercial Project 2" class="w-full h-auto">
-            <h3 class="text-xl font-semibold mt-4">Commercial</h3>
-            <p class="text-gray-600">
-              The barn house captivates with its blend of rustic charm and modern.
-            </p>
-            <a href="#" class="text-green-500 mt-2">View Details</a>
-          </div>
-      
-          <!-- Third Row -->
-          <div class="md:col-span-2 lg:col-span-1 flex flex-col items-center">
-            <img src="./images/img3.png" alt="Commercial Project 3" class="w-full h-auto">
-            <h3 class="text-xl font-semibold mt-4">Commercial</h3>
-            <p class="text-gray-600">
-              The barn house captivates with its blend of rustic charm and modern.
-            </p>
-            <a href="#" class="text-green-500 mt-2">View Details</a>
-          </div>
-      
-          <!-- Fourth Row -->
-          <div class="md:col-span-1 lg:col-span-2 flex flex-col items-center">
-            <img src="./images/img4.png" alt="Commercial Project 4" class="w-full h-auto">
-            <h3 class="text-xl font-semibold mt-4">Commercial</h3>
-            <p class="text-gray-600">
-              The barn house captivates with its blend of rustic charm and modern.
-            </p>
-            <a href="#" class="text-green-500 mt-2">View Details</a>
-          </div>
-        </div>
-      </div>
+
     <!-- Rinterio News -->
     <section class="bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
@@ -238,7 +202,64 @@
       </div>
     </section>
 
-    
+  <!--Creative Section--> 
+  <section class="bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-blue-900 sm:text-4xl mb-4">We Give Service TOO!</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">We Provide Architectural Services Too for Our Customers. You Can Check Below!.</p>
+      </div>
+      
+      <div class="flex flex-wrap gap-4 justify-center">
+        <!-- Card 1 -->
+        <div class="card bg-base-300 w-full sm:w-80 md:w-96 shadow-xl">
+          <figure>
+            <img
+              src="https://www.aces.edu/wp-content/uploads/2018/08/iStock-876143730-2.jpg"
+              alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Soil Testing</h2>
+            <p>We Give Soil Testing Service to The professional Level</p>
+            <div class="card-actions justify-end">
+              <button class="btn bg-button-primary text-black hover:bg-white">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Card 2 -->
+        <div class="card bg-base-300 w-full sm:w-80 md:w-96 shadow-xl">
+          <figure>
+            <img
+              src="https://www.constructionsciences.net/wp-content/uploads/menu-cmt.jpg"
+              alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Material Testing</h2>
+            <p>We Provide matrial Testing as Well For your Need</p>
+            <div class="card-actions justify-end">
+              <button class="btn bg-button-primary text-black hover:bg-white">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Card 3 -->
+        <div class="card bg-base-300 w-full sm:w-80 md:w-96 shadow-xl">
+          <figure>
+            <img
+              src="https://cdn.jwplayer.com/v2/media/6dv0mJ2w/poster.jpg"
+              alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Explosive Service</h2>
+            <p>Wherever You Need Destruction Just Call us ! </p>
+            <div class="card-actions justify-end">
+              <button class="btn bg-button-primary text-black hover:bg-white">Buy Now</button>
+            </div>
+          </div>
+        </div>
+  
+      </div>
 <!-- Contact Section -->
 <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
     <!-- Header Section -->
@@ -302,7 +323,11 @@
     </body>
     <footer class="bg-black text-neutral-content p-10">
         <div class="container mx-auto text-center">
-          <h1 class="text-2xl font-bold mb-4">Rinterio</h1>
+          <div class="ml-2 inline-flex items-center justify-center w-6 h-6 bg-button-primary text-white rounded-full">
+            <span class="text-xs text-black">↗</span> 
+            <span>  </span>
+            <span> </span>
+          </div>
           <p class="mb-8">
             The barn house captivates with its blend of rustic charm and modern sophistication,
             featuring weathered wood, sleek metal accents.
@@ -314,7 +339,13 @@
             <a href="#" class="link link-hover">Blogs</a>
             <a href="#" class="link link-hover">Contact Us</a>
           </div>
-          <a href="#" class="btn btn-accent">Book Consult</a>
+          <a href="#" class="ml-4 px-3 py-2 bg-button-primary text-black rounded-full font-medium  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 ">
+            Book Consult
+            <span class="ml-2 inline-flex items-center justify-center w-6 h-6 bg-black text-white rounded-full">
+              <span class="text-xs">↗</span>
+              <span></h1>
+            </span>
+          </a>
         </div>
       </footer>      
 </body>
